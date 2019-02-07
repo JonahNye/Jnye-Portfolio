@@ -1,0 +1,446 @@
+body {
+    background-color: rgb(31, 16, 16);
+}
+
+landing {
+   width: 100vw;
+   height: 100vh;
+   font-family: cinzel;
+   opacity: 1;
+   transition: 0.7s opacity;
+}
+
+landing h2 {
+    font-size: 15pt;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    color: #f5d9cb;
+    z-index: 4;
+    left: 0%;
+    bottom: 0%;
+    height: 8%;
+    width: 100%;
+    text-align: center;
+    animation: fade-in 4s;
+    -webkit-animation: fade-in 4s;
+    font-size: 14pt;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.toGallery {
+    height: 100%;
+    z-index: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17pt;
+    /* border-radius: 25px; */
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#to-gallery {
+    animation: flicker 8s infinite;
+    -webkit-animation: flicker 8s infinite;
+    font-size: 19pt;
+}
+
+@keyframes flicker {
+    0% {text-shadow: darkred 2.25px 1px;}
+    10% {text-shadow: red 2.25px 1px;}
+    20% {text-shadow: orangered 2.25px 1px;}
+    30% {text-shadow: darkorange 2.25px 1px;}
+    40% {text-shadow: goldenrod 2.25px 1px;}
+    50% {text-shadow: darkorange 2.25px 1px;}
+    60% {text-shadow: goldenrod 2.25px 1px;}
+    70% {text-shadow: darkorange 2.25px 1px;}
+    80% {text-shadow: orangered 2.25px 1px;}
+    90% {text-shadow: red 2.25px 1px;}
+    100% {text-shadow: darkred 2.25px 1px;}
+}
+
+@-webkit-keyframes flicker {
+    0% {text-shadow: darkred 2.25px 1px;}
+    10% {text-shadow: red 2.25px 1px;}
+    20% {text-shadow: orangered 2.25px 1px;}
+    30% {text-shadow: darkorange 2.25px 1px;}
+    40% {text-shadow: goldenrod 2.25px 1px;}
+    50% {text-shadow: darkorange 2.25px 1px;}
+    60% {text-shadow: goldenrod 2.25px 1px;}
+    70% {text-shadow: darkorange 2.25px 1px;}
+    80% {text-shadow: orangered 2.25px 1px;}
+    90% {text-shadow: red 2.25px 1px;}
+    100% {text-shadow: darkred 2.25px 1px;}
+}
+
+ .toGallery:hover {
+    background-color: hsl(0, 7%, 11%);
+}
+
+.blur-container {
+    display: inline-block;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+}
+
+#landing-background-image {
+    left: 0%;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed; 
+    display: block;
+}
+
+
+.blur-container:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* shift radial gradeint startpoint right*/
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(12, 12, 12, 0.4) 40%,rgba(12, 12, 12, 0.8) 80%);
+    z-index: 3;
+
+}
+
+/*--------- Gallery ----------*/
+
+
+ .fade-in-cont {
+     position: relative;
+     height: 98vh;
+     width: 98vw;
+     animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
+    left: 0%;
+    top: 0%;
+ }
+
+ .nav-bar {
+     top: 0%;
+     left: 0%;
+     position: fixed;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100vw;
+     background-color: black;
+     color: #f5d9cb;
+     height: 7%;
+     z-index: 3;
+     text-decoration: #eb5763 underline;
+ }
+
+
+ .nav-bar-img {
+    position: fixed;
+    height: 7%;
+    width: 5%;
+    cursor: pointer;
+    z-index: 4;
+    top: 0%;
+    left: 5%;
+ }
+
+ .nav-link p {
+     font-size: 14pt;
+     font-family: cinzel;
+ }
+
+ .nav-link {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     height: 100%;
+     cursor: pointer;
+     margin-left: 15%;
+ }
+
+ .nav-link:hover {
+     background-color: hsla(0, 7%, 20%, 0.479);
+ }
+
+.gallery-body {
+    position: relative;
+    top: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.project-preview {
+    position: relative;
+    /* left: 0%; */
+    width: 97%;
+    height: 83%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6%;
+    animation: slide-in 1s;
+    -webkit-animation: slide-in 1s;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+}
+
+.project-preview:nth-child(1) {
+    margin-top: 4%;
+}
+
+.project-preview:nth-child(3) {
+    margin-bottom: 3%;
+}
+
+@keyframes slide-in {
+    0% {right: -100%}
+    100% { right: 0%; }
+}
+
+@-webkit-keyframes slide-in {
+    0% {right: -100%}
+    100% { right: 0%}
+}
+
+.preview-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 180px;
+    border-bottom-left-radius: 10px;
+}
+
+.lang-icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.lang-icon img {
+    width: 9%;
+    height: 9%;
+}
+
+.lang-icon img:nth-child(1) {
+    width: 11%;
+    height: 11%;
+}
+
+.lang-icon img:nth-child(2) {
+    width: 12%;
+    height: 12%;
+}
+
+.lang-icon img:nth-child(5) {
+    width: 11%;
+    height: 12%;
+}
+
+#trim-1 {
+    border-top: #eb5763 2px solid;
+    border-left: #eb5763 2px solid;
+    border-bottom: #eb5763 2px solid;
+    background-image: url("../../../app/resources/images/the-avengers-lg.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#trim-2 {
+    border-top: #f5d9cb 2px solid;
+    border-left: #f5d9cb 2px solid;
+    border-bottom: #f5d9cb 2px solid;
+    background-image: url("../../../app/resources/images/carrot-ink.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#trim-3 {
+    border-top: #eb5763 2px solid;
+    border-left: #eb5763 2px solid;
+    border-bottom: #eb5763 2px solid;
+    background-image: url("../../../app/resources/images/hops-logo-bw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.preview-image {
+    width: 65%;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 180px;
+    border-top-right-radius: 10px;
+}
+
+.preview-image-overlay {
+    display: none;
+    height: 100%;
+    width: 65%;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: 35%;
+    width: 65.25%;
+    border: 1px solid black;
+    border-bottom-right-radius: 180px;
+    border-top-right-radius: 10px;
+    background-color: rgba(211, 211, 211, 0.644);
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-image-overlay img {
+    width: 15%;
+    height: 30%;
+}
+
+.overlay-active {
+    display: flex;
+}
+
+#border-1 {
+    border: #eb5763 2px solid;
+    border-left: #eb5763 3px solid;
+}
+
+#border-2 {
+    border: #f5d9cb 2px solid;
+    border-left: #f5d9cb 3px solid;
+}
+
+#border-3 {
+    border: #eb5763 2px solid;
+    border-left: #eb5763 3px solid;
+}
+
+
+/*-------- About Me ----------*/
+
+.link-logo-cont {
+    position: relative;
+    top: 7%;
+}
+
+.link-logo-cont img {
+    cursor: pointer;
+    width: 2%;
+    height: 2%;
+}
+
+/*-------- Budget Buddy ------*/
+
+.nav-bar-budget {
+    background-color: white;
+    color: #307AAD;
+    text-decoration: underline #C6273D;
+    border-bottom: #C6273D 1px solid;
+    height: 6%;
+    font-weight: 100;
+}
+
+.nav-bar-img-budget {
+    height: 6%;
+    width: 4%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 4;
+    top: 0%;
+    left: 5%;
+}
+
+.iframe-budget {
+    margin-top: 1px;
+    position: relative;
+    left: 0%;
+    top: 5%;
+    width: 100%;
+    height: 96%;
+}
+
+
+/*------- Recipease ------*/
+
+.nav-bar-recipease {
+    background-color: #ED7D2D;
+    color: white;
+    text-decoration: underline #a2ee98;
+    border-bottom: white 1px solid;
+    height: 6%;
+}
+
+.iframe-recipease {
+    position: relative;
+    width: 100%;
+    height: 96%;
+    left: 0%;
+    top: 5%;
+}
+
+.nav-bar-img-recipease {
+    height: 6%;
+    width: 4%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 4;
+    top: 0%;
+    left: 5%;
+}
+
+
+
+/* ----------- Hops Acad ---------*/
+
+.nav-bar-hops {
+    background-color: #1E2D2F;
+    color: #F7DBA7;
+    text-decoration: underline #C57B57;
+    border-bottom: #F7DBA7 1px solid;
+    height: 6%;
+}
+
+.nav-bar-img-hops {
+    height: 6%;
+    width: 4%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 4;
+    top: 0%;
+    left: 5%;
+}
+
+.iframe-hops {
+    position: relative;
+    left: 0%;
+    top: 5%;
+    width: 100%;
+    height: 96%;
+}
