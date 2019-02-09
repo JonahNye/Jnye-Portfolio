@@ -8,53 +8,73 @@
             <p>About Me</p>
         </section>
     </section>
+
     <section class="gallery-body">
 
+
         <section class="project-preview">
+            <section class="instruction-overlay-budget">
+                <p ng-click="$ctrl.budgetInstruction();"> X </p>
+            </section>
+
             <section id="trim-1" class="preview-summary">
                 <h3>Budgeting App</h3>
                 <p>.</p>
-                <p>.</p>
+                <p class="instructions" ng-click="$ctrl.budgetInstruction(open + !close);">Instructions</p>
                 <section class="lang-icon">
                     <img src="../../../../public/app/resources/images/HTML_Logo.png">
                     <img src="../../../../public/app/resources/images/css_icon.png">
                     <img src="../../../../public/app/resources/images/js_icon.png">
                     <img src="../../../../public/app/resources/images/jquery_icon.png">
+                    <img src="../../../../public/app/resources/images/node_icon.png">
                 </section>
                 <p>Thank you to Marvel for not suing me yet.</p>
             </section>
+
             <section ng-click="$ctrl.goBudget();" class="preview-image-overlay">
                 <img src="../../../../public/app/resources/images/desktop/expand-window.png">
             </section>
+
             <section class="preview-image">
                 <img id="border-1" src="../../../../public/app/resources/images/desktop/avengers-screenshot.png">
             </section>
         </section>
-        <section id="slide-in-hook" class="project-preview">
+
+
+        <section id="slide-in-hook recipease" class="project-preview">
+            <section class="instruction-overlay-recipe">
+                <p ng-click="$ctrl.recipeInstruction();">X</p>
+            </section>
+
             <section id="trim-2" class="preview-summary">
                 <h3>API Search Engine</h3>
                 <p>.</p>
-                <p>.</p>
+                <p class="instructions" ng-click="$ctrl.recipeInstruction(open + !close);">Instructions</p>
                 <section class="lang-icon">
                     <img src="../../../../public/app/resources/images/HTML_Logo.png">
                     <img src="../../../../public/app/resources/images/css_icon.png">
                     <img src="../../../../public/app/resources/images/js_icon.png">
                     <img src="../../../../public/app/resources/images/jquery_icon.png">
                     <img src="../../../../public/app/resources/images/angular_icon.png">
+                    <img src="../../../../public/app/resources/images/node_icon.png">
                 </section>
                 <p>Brought to you in part by the creators of the <a href="https://developer.edamam.com/edamam-recipe-api" target="_blank">Edamam API.</a></p>
             </section>
+
             <section ng-click="$ctrl.goRecipease();" class="preview-image-overlay">
                     <img src="../../../../public/app/resources/images/desktop/expand-window.png">
-                </section>
+            </section>
+
             <section class="preview-image">
                 <img id="border-2" src="../../../../public/app/resources/images/desktop/recipease-screenshot.png">
             </section>
         </section>
-        <section id="slide-in-hook" class="project-preview">
+
+
+        <section id="slide-in-hook hops" class="project-preview">
+
             <section id="trim-3" class="preview-summary">
                 <h3>Trivia App</h3>
-                <p>.</p>
                 <p>.</p>
                 <section class="lang-icon">
                     <img src="../../../../public/app/resources/images/HTML_Logo.png">
@@ -66,9 +86,11 @@
                 </section>
                 <p>Made with help from <a href="https://www.brewerydb.com/" target="_blank">Brewery DB</a> and <a href="https://opentdb.com/" target="_blank">Open Trivia DB</a> APIs.</p>
             </section>
+
             <section ng-click="$ctrl.goHops();" class="preview-image-overlay">
                     <img src="../../../../public/app/resources/images/desktop/expand-window.png">
-                </section>
+            </section>
+
             <section class="preview-image">
                 <img id="border-3" src="../../../../public/app/resources/images/desktop/hops-screenshot.png">
             </section>

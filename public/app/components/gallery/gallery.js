@@ -16,13 +16,13 @@ const gallery = {
         // });
 
 
-        //re-load gallery @top of page
+        //re-load gallery @top of page------------------------------------------------------
         $(window).on('beforeunload', function(){
             $(window).scrollTop(0);
           });
           
 
-        //All routes
+        //All routes -------------------------------------------------------------------------
         vm.goLanding = () => {
             $location.path('/landing');
         }
@@ -48,7 +48,7 @@ const gallery = {
         }
 
 
-        //assign overlay class on preview image container
+        //assign overlay class on preview image container-------------------------------------
         $( ".preview-image" ).mouseover(function() {
             $( ".preview-image-overlay" ).addClass( "overlay-active" );
           });
@@ -57,6 +57,27 @@ const gallery = {
             $( ".preview-image-overlay" ).removeClass( "overlay-active" );
           });
 
+
+        //instruction panels--------------------------------------------------------------------
+        vm.budgetInstruction = (open, close) => {
+            if (open) {
+                $(".instruction-overlay-budget").addClass("instruction-overlay-on");
+            }
+            else {
+                console.log("connected");
+                $(".instruction-overlay-budget").removeClass("instruction-overlay-on");
+            }
+        }
+
+        vm.recipeInstruction = (open, close) => {
+            if (open) {
+                $(".instruction-overlay-recipe").addClass("instruction-overlay-on");
+            }
+            else {
+                $(".instruction-overlay-recipe").removeClass("instruction-overlay-on");
+            }
+        }
+        //-------------------------------------------------------------------------------------------
 
     }]
 }
