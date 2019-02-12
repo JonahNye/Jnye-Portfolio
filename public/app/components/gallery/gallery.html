@@ -11,16 +11,99 @@
 
     <section class="gallery-body">
 
+            <section id="slide-in-hook hops" class="project-preview">
+
+                    <section id="trim-3" class="preview-summary">
+                        <h3>Trivia App</h3>
+                        <section class="description">
+                          <p>Enjoy a special effects laden trivia app designed to simulate everyone's favorite kind of trivia: bar night trivia!</p>
+                          <p>This project uses JavaScript to dynamically scale the intensity of special CSS effects as the rounds progress and you finish your "drinks".</p>
+                          <p>Two different APIs for trivia questions and beer types are accesssed to keep things interesting.</p>
+                          <p>Please give this project time to load upon clicking on the screenshot to play!</p>
+                        </section>
+                        <section class="lang-icon">
+                            <img src="../../../../public/app/resources/images/HTML_Logo.png">
+                            <img src="../../../../public/app/resources/images/css_icon.png">
+                            <img src="../../../../public/app/resources/images/js_icon.png">
+                            <img src="../../../../public/app/resources/images/jquery_icon.png">
+                            <img src="../../../../public/app/resources/images/angular_icon.png">
+                            <img src="../../../../public/app/resources/images/node_icon.png">
+                        </section>
+                        <p>Made with help from <a href="https://www.brewerydb.com/" target="_blank">Brewery DB</a> and <a href="https://opentdb.com/" target="_blank">Open Trivia DB</a> APIs.</p>
+                    </section>
+        
+                    <section ng-click="$ctrl.goHops();" class="preview-image-overlay">
+                            <img src="../../../../public/app/resources/images/desktop/expand-window.png">
+                    </section>
+        
+                    <section class="preview-image">
+                        <img id="border-3" src="../../../../public/app/resources/images/desktop/hops-screenshot.png">
+                    </section>
+            </section>
+
+
+
+            <section id="slide-in-hook recipease" class="project-preview">
+                    <section class="instruction-overlay-recipe instruction-text">
+                        <i ng-click="$ctrl.recipeInstruction();" class="material-icons">clear</i>
+                        <p>Enter what you're hungry for in the search bar.</p>
+                        <p>Optional: click on Sous-Chef Search to select any dietary restrictions you may want to filter results by.</p>
+                        <p>Once you have entered information click the carrot arrow to execute your search!</p>
+                        <p>In the results page click the + symbol to get more information on each recipe.</p>
+                        <p>Click the heart button to add the recipe to your favorites page.</p>
+                        <p>Click the icons in the top right corner to navigate from page to page.</p>
+                        <p>Don't play with your food!</p>
+                    </section>
+        
+                    <section id="trim-2" class="preview-summary">
+                        <h3>Recipe Search App</h3>
+                        <section class="description">
+                          <p>This is my first app I built with AngularJs.</p>
+                          <p>Using HTML and CSS we structured and styled the home screen to feel like Google, but with a healthy flare.</p>
+                          <p>We created three custom angular components for a search page, a results page, and a favorties page.</p>
+                          <p>I then added a back end to the app using Node to make this accessible online.</p>
+                          <p class="instructions" ng-click="$ctrl.recipeInstruction(open + !close);">Open Instructions</p>
+                        </section>
+                        <section class="lang-icon">
+                            <img src="../../../../public/app/resources/images/HTML_Logo.png">
+                            <img src="../../../../public/app/resources/images/css_icon.png">
+                            <img src="../../../../public/app/resources/images/js_icon.png">
+                            <img src="../../../../public/app/resources/images/jquery_icon.png">
+                            <img src="../../../../public/app/resources/images/angular_icon.png">
+                            <img src="../../../../public/app/resources/images/node_icon.png">
+                        </section>
+                        <p>Brought to you in part by the creators of the <a href="https://developer.edamam.com/edamam-recipe-api" target="_blank">Edamam API.</a></p>
+                    </section>
+        
+                    <section ng-click="$ctrl.goRecipease();" class="preview-image-overlay">
+                            <img src="../../../../public/app/resources/images/desktop/expand-window.png">
+                    </section>
+        
+                    <section class="preview-image">
+                        <img id="border-2" src="../../../../public/app/resources/images/desktop/recipease-screenshot.png">
+                    </section>
+            </section>
+
 
         <section class="project-preview">
-            <section class="instruction-overlay-budget">
-                <p ng-click="$ctrl.budgetInstruction();"> X </p>
+            <section class="instruction-overlay-budget instruction-text">
+                <i ng-click="$ctrl.budgetInstruction();" class="material-icons">clear</i>
+                <p>Enter the information for an expense at the bottom of the page and click "ADD ITEM".</p>
+                <p>Watch as your remaining budget ticks away to the updated total.</p>
+                <p>Interact with the pie chart to see how you spend your hard earned cash.</p>
+                <p>Hover over the categories on the left side to see each entry by category.</p>
+                <p>When you're done get back to saving the world you super hero.</p>
             </section>
 
             <section id="trim-1" class="preview-summary">
                 <h3>Budgeting App</h3>
-                <p>.</p>
-                <p class="instructions" ng-click="$ctrl.budgetInstruction(open + !close);">Instructions</p>
+                <section class="description">
+                  <p>This is a simple weekly budgeting app. It was my first major project.</p>
+                  <p>Using HTML and CSS we made a fun Avengers themed display.</p>
+                  <p>Using JavaScript and Jquery we manipulated the pie chart and remianing budget display to update as the user adds expenses.</p>
+                  <p>I then added a back-end using Node to make this app accessible to you!</p>
+                  <p class="instructions" ng-click="$ctrl.budgetInstruction(open + !close);">Open Instructions</p>
+                </section>
                 <section class="lang-icon">
                     <img src="../../../../public/app/resources/images/HTML_Logo.png">
                     <img src="../../../../public/app/resources/images/css_icon.png">
@@ -40,61 +123,6 @@
             </section>
         </section>
 
-
-        <section id="slide-in-hook recipease" class="project-preview">
-            <section class="instruction-overlay-recipe">
-                <p ng-click="$ctrl.recipeInstruction();">X</p>
-            </section>
-
-            <section id="trim-2" class="preview-summary">
-                <h3>API Search Engine</h3>
-                <p>.</p>
-                <p class="instructions" ng-click="$ctrl.recipeInstruction(open + !close);">Instructions</p>
-                <section class="lang-icon">
-                    <img src="../../../../public/app/resources/images/HTML_Logo.png">
-                    <img src="../../../../public/app/resources/images/css_icon.png">
-                    <img src="../../../../public/app/resources/images/js_icon.png">
-                    <img src="../../../../public/app/resources/images/jquery_icon.png">
-                    <img src="../../../../public/app/resources/images/angular_icon.png">
-                    <img src="../../../../public/app/resources/images/node_icon.png">
-                </section>
-                <p>Brought to you in part by the creators of the <a href="https://developer.edamam.com/edamam-recipe-api" target="_blank">Edamam API.</a></p>
-            </section>
-
-            <section ng-click="$ctrl.goRecipease();" class="preview-image-overlay">
-                    <img src="../../../../public/app/resources/images/desktop/expand-window.png">
-            </section>
-
-            <section class="preview-image">
-                <img id="border-2" src="../../../../public/app/resources/images/desktop/recipease-screenshot.png">
-            </section>
-        </section>
-
-
-        <section id="slide-in-hook hops" class="project-preview">
-
-            <section id="trim-3" class="preview-summary">
-                <h3>Trivia App</h3>
-                <p>.</p>
-                <section class="lang-icon">
-                    <img src="../../../../public/app/resources/images/HTML_Logo.png">
-                    <img src="../../../../public/app/resources/images/css_icon.png">
-                    <img src="../../../../public/app/resources/images/js_icon.png">
-                    <img src="../../../../public/app/resources/images/jquery_icon.png">
-                    <img src="../../../../public/app/resources/images/angular_icon.png">
-                    <img src="../../../../public/app/resources/images/node_icon.png">
-                </section>
-                <p>Made with help from <a href="https://www.brewerydb.com/" target="_blank">Brewery DB</a> and <a href="https://opentdb.com/" target="_blank">Open Trivia DB</a> APIs.</p>
-            </section>
-
-            <section ng-click="$ctrl.goHops();" class="preview-image-overlay">
-                    <img src="../../../../public/app/resources/images/desktop/expand-window.png">
-            </section>
-
-            <section class="preview-image">
-                <img id="border-3" src="../../../../public/app/resources/images/desktop/hops-screenshot.png">
-            </section>
-        </section>
 
     </section>
 

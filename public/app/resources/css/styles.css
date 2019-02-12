@@ -127,7 +127,6 @@ landing h2 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* shift radial gradeint startpoint right*/
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(12, 12, 12, 0.4) 40%,rgba(12, 12, 12, 0.8) 80%);
     z-index: 3;
 
@@ -234,6 +233,13 @@ gallery h3 {
     cursor: pointer;
 }
 
+.instructions:hover {
+    color: #945d60;
+}
+
+a:visited {
+    color: #3c3c3c;
+}
 
 .instruction-overlay-budget {
     position: absolute;
@@ -245,7 +251,7 @@ gallery h3 {
 
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     
@@ -272,7 +278,7 @@ gallery h3 {
 
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 
@@ -288,9 +294,25 @@ gallery h3 {
     background-repeat: no-repeat;
 }
 
+.instruction-text p {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+i {
+    margin-top: 1%;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
 
 .instruction-overlay-on {
     display: flex;
+    animation: fade-in .5s;
+    -webkit-animation: fade-in .5s;
 }
 
 .project-preview:nth-child(1) {
@@ -323,6 +345,18 @@ gallery h3 {
     border-top-left-radius: 180px;
     border-bottom-left-radius: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+.preview-summary h3 {
+    font-size: 16pt;
+    color: #945d60;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
 }
 
 .lang-icon {
@@ -413,6 +447,8 @@ gallery h3 {
 
 .overlay-active {
     display: flex;
+    animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
 }
 
 #border-1 {
@@ -458,6 +494,18 @@ gallery h3 {
     justify-content: space-around;
     align-items: center;
     background-color: #945d60;
+    animation: slide-in 2s;
+    -webkit-animation: slide-in 2s;
+}
+
+@keyframes slide-in {
+    0% {left: -100%;}
+    100% { left: 0%;}
+}
+
+@-webkit-keyframes slide-in {
+    0% {left: -100%;}
+    100% { left: 0%;}
 }
 
 .blurb {
@@ -472,16 +520,19 @@ gallery h3 {
 
 .profile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     font-family: roboto;
     color: white;
     width: 60%;
 }
 
 .profile img {
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
+    margin-top: 30%;
+    /*margin-bottom: 30%; */
+    width: 70px;
+    height: 70px;
 }
 
 
