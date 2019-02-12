@@ -498,6 +498,12 @@ i:hover {
     -webkit-animation: slide-in 2s;
 }
 
+.bio h2 {
+    color: white;
+    text-align: center;
+    font-family: cinzel;
+}
+
 @keyframes slide-in {
     0% {left: -100%;}
     100% { left: 0%;}
