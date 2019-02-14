@@ -1,5 +1,6 @@
 body {
     background-color: #945d60;
+    
 }
 
 landing {
@@ -517,6 +518,7 @@ i:hover {
     color: white;
     text-align: center;
     font-family: cinzel;
+    font-size: 20pt;
 }
 
 @keyframes slide-in {
@@ -554,7 +556,7 @@ i:hover {
 }
 
 .profile img {
-    margin-top: 30%;
+    margin-top: 15%;
     /*margin-bottom: 30%; */
     width: 70px;
     height: 70px;
@@ -580,8 +582,8 @@ i:hover {
     
     border-radius: 50%;
 
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
 }
 
 .loader:before {
@@ -595,8 +597,8 @@ i:hover {
     
     border-radius: 50%;
 
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .loader:after {
@@ -610,8 +612,8 @@ i:hover {
     
     border-radius: 50%;
 
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 2.25s linear infinite;
+    animation: spin 2.25s linear infinite;
 }
 
 /*------*/
