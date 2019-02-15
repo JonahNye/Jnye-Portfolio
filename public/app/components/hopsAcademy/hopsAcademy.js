@@ -17,6 +17,12 @@ const hopsAcademy = {
             $location.path('/aboutme');
         }
 
+        vm.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+           };
+           
+           vm.hopsLink = { src:"https://hops-academy.herokuapp.com/#!/" }; 
+
     }]
 }
 
