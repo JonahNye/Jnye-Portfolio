@@ -24,7 +24,3 @@ angular
                 template: "<landing></landing>"
             })
     }]);
-
-
-
-    //inject $location into the controller of any component redirecting to another. see API project

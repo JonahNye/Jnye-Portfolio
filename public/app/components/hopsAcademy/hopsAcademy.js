@@ -2,7 +2,7 @@
 
 const hopsAcademy = {
     templateUrl: "app/components/hopsAcademy/hopsAcademy.html",
-    controller: ["Service", "$location", function (Service, $location) {
+    controller: ["$location", "$sce", function ($location, $sce) {
         const vm = this;
 
         vm.goLanding = () => {
@@ -21,7 +21,7 @@ const hopsAcademy = {
             return $sce.trustAsResourceUrl(src);
            };
            
-           vm.hopsLink = { src:"https://hops-academy.herokuapp.com/#!/" }; 
+        vm.hopsLink = { src:"https://hops-academy.herokuapp.com/#!/" }; 
 
     }]
 }
